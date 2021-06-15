@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RG-Series</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+    </script>
+    <style type="text/css">
+
+        #mainnav {
+            background-color: black;
+            height: 35px;
+        }
+
+        #mainnav li {
+            float: left;
+            width: 150px;
+            height: 35px;
+            background-color: black;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        #mainnav ul li a {
+            color:#ffffff;
+            text-decoration: none;
+            display:block;
+        }
+
+        #mainnav ul li a:hover {
+            color: gray;
+
+        }
+
+        #card
+        {
+            width: 18rem; float: left; margin-right: 10px;
+        }
+        #cardlast
+        {
+            width: 18rem; margin-right: 10px;
+        }
+        #card :hover
+        {
+            cursor: pointer;
+
+        }
+        #card:hover div{
+            display: unset;
+        }
+        #card div
+        {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: black">
+    <div style="background-color: black;">
+        <img src="Images/Logo.jpg" alt="I am somewhere" width="10%" height="10%" style="float:left"; />
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">New & Popular</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My List</a>
+                        </li>
+                        <li class="nav-item dropdown" style="float: right">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Profile
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Account</a></li>
+                                <li><a class="dropdown-item" href="#">Help Center</a></li>
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+
+    <div id="carouselMain" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="Images/StrangerThingsimg.jpg" class="d-block w-100" alt="..."  height="600">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 style="color: Red">Stranger Things</h3>
+                    <button type="button" class="btn btn-light">Play</button>
+                    <p style="color: white">Coming Soon...</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="Images/Whispersimg.jpg" class="d-block w-100" alt="..." height="600">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/Arcane.png" class="d-block w-100" alt="..." height="600">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 style="color: white">ARCANE</h5>
+                    <p style="color: white">The series was announced at the League of Legends 10th Anniversary celebrations.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<div >
+    <div>
+        <h5 style="color: white; margin-left: 35px ">Continue Watching for </h5>
+        <div id="carouselcards1" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-inner" style="margin-left: 35px">
+                <div class="carousel-item active">
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/friendcards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">Link</button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Modal Header</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Some text in the modal.</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/lovedeathrobotscards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselcards1" data-bs-slide="prev" style="width: 2%">
+                <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselcards1" data-bs-slide="next" style="width: 2%" >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <div>
+        <h5 style="color: white; margin-left: 35px" >Trending Now</h5>
+        <div id="carouselcards2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="margin-left: 35px">
+                <div class="carousel-item active">
+                    <div class="card bg-dark" id="card" >
+                        <img src="Images/lupincards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card" >
+                        <img src="Images/sweettoothcards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/familyguycards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/finalspacecards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/thewitchercards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselcards2" data-bs-slide="prev" style="width: 2%">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselcards2" data-bs-slide="next" style="width: 2%">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div>
+        <h5 style="color: white; margin-left: 35px">My List</h5>
+        <div id="carouselcards3" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="margin-left: 35px">
+                <div class="carousel-item active">
+                    <div class="card bg-dark" id="card" >
+                        <img src="Images/the100cards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card" >
+                        <img src="Images/queensgambitcards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/strangerthingscards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/darkcards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/thewitchercards.JPG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselcards3" data-bs-slide="prev" style="width: 2%">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselcards3" data-bs-slide="next" style="width: 2%">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
