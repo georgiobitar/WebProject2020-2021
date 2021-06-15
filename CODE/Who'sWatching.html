@@ -1,5 +1,25 @@
 <html>
-    <body>
+    <script type="text/javascript" src="users.json"></script>
+    <script type="text/javascript" >
+    function Loadpage(){
+        var user = sessionStorage.getItem("user");
+        window.prompt(user);
+        var mydata = JSON.parse(users);
+        var i;
+        for (i=0; i<mydata.length; i++){
+
+           
+            if (mydata[i].email == user){
+                window.alert("165454");
+                document.getElementById("prof1").value=mydata[i].p1;
+                document.getElementById("prof2").value=mydata[i].p2;
+                document.getElementById("prof3").value=mydata[i].p3;
+                document.getElementById("prof4").value=mydata[i].p4;
+            }
+        }
+    }
+    </script>
+    <body onload="Loadpage()">
         <style type="text/css">
         body {background-color: black;}
 .table{
@@ -24,10 +44,10 @@
                 <td style="text-align: center;"> <img src="./Images/profile4.png" alt="Profile 4" style="width:50%"></td>
             </tr>
             <tr>
-                <td class="text">RuBa</td>
-                <td class="text">JaNa</td>
-                <td class="text">LaNa</td>
-                <td class="text">Gio</td>
+                <td  class="text" id="prof1"></td>
+                <td  class="text" id="prof2"></td>
+                <td  class="text" id="prof3"></td>
+                <td  class="text" id="prof4"></td>
             </tr>
         </table>
     </Center>

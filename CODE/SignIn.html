@@ -5,13 +5,30 @@
 
     <script type="text/javascript" src="users.json"></script>
     <script type="text/javascript" >
-        function getData()
+        function CheckMailandPass()
         {
+            
             var mydata = JSON.parse(users);
-            alert(mydata[0].email);
-            alert(mydata[0].plan);
-            alert(mydata[1].email);
-            alert(mydata[1].plan);
+            var i;
+            var mail=document.getElementById("inputEmail3").value;
+            var pass=document.getElementById("inputPassword3").value;
+            var found=false;
+            for (i=0; i<mydata.length; i++){
+                if (mail == mydata[i].email && pass == mydata[i].password){
+                    window.location.assign("./Who'sWatching.html");
+                    found=true;
+                    var user = mydata[i].email;
+                    sessionStorage.setItem("user", user);
+                }
+            }
+            if (found==true){
+                window.alert("Welcome To Your account!");
+            }
+            else 
+            {
+                window.alert ("This user is Not Found. Make Sure of The Email and Password!");
+            }
+            
 
         }
 
@@ -48,10 +65,18 @@
                     </div>
                   </div>  
               </li>
+            </li>
+            <li class="list-group-item">
+              <div class="row mb-3">
+              <div class="card-body">
+                <a href="#" class="btn btn-primary" onclick="CheckMailandPass()">Sign In</a>
+            </div>
+            </div>
+        </li>
             </ul>
             <div class="card-body">
             Don't Have an Account?
-              <a href="#" class="card-link" onclick="getData()"><br>Sign Up Here</a>
+              <a href="#" class="card-link"><br>Sign Up Here</a>
             </div>
           </div>
 
