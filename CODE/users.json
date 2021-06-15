@@ -1,0 +1,2 @@
+users = '[{ "email": "rouba@gmail.com","password":"123","phone": "123456789", "card": "111","plan": "basic"},{ "email": "georgio@gmai.com","password":"123","phone": "123456789", "card": "111","plan": "basic"}]';
+
