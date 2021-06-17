@@ -2,7 +2,31 @@
     <head><title>Account</title></head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <body>
+    <script type="text/javascript" src="users.json"></script>
+    <script type="text/javascript">
+        function load()
+        {
+            var user = "rouba@gmail.com"; //to be fetched from previous page
+            var mydata = JSON.parse(users);
+            for (i=0; i< mydata.length;i++)
+            {
+                if(mydata[i].email === user)
+                {
+                    document.getElementById("tdemail").innerHTML=mydata[i].email;
+                    document.getElementById("tdpass").innerHTML=mydata[i].password;
+                    document.getElementById("tdphone").innerHTML=mydata[i].phone;
+                    document.getElementById("tdvisa").innerHTML=mydata[i].card;
+                    document.getElementById("tdplan").innerHTML="<b>"+mydata[i].plan+"</b>";
+                }
+            }
+
+
+        }
+    </script>
+
+
+
+    <body onload="load()">
         <style type="text/css">
         body {
             background-image: url('./Images/netflixmovies.jpg');
@@ -28,109 +52,110 @@
                         <tbody>
                           <tr>
                             <th scope="row" style="color: grey;">Membership & Billing</th>
-                            <td>jayjay1232gmail.com</td>
+                            <td id="tdemail">jayjay1232gmail.com</td>
                             
                           </tr>
                           <tr>
-                            <th scope="row"></th>
-                            <td style="font-family: Arial, Helvetica, sans-serif;">Password *********</td>
+                            <th scope="row" style="color: grey;">Password</th>
+                            <td style="font-family: Arial, Helvetica, sans-serif;" id="tdpass">Password *********</td>
                         </tr>
                             <tr>
-                            <th scope="row"></th>   
-                            <td style="font-family: Arial, Helvetica, sans-serif;">Phone 03 524 555</td>
+                            <th scope="row" style="color: grey;">Phone</th>
+                            <td style="font-family: Arial, Helvetica, sans-serif;" id="tdphone">Phone 03 524 555</td>
             
-                        </tr>
+                            </tr>
                         <tr>
-                            <th scope="row"></th>
-                            <td colspan="2">Visa Card ***************</td>
-                            <tr>
-                                <th scope="row"></th>
+                            <th scope="row" style="color: grey;">Visa Card</th>
+                            <td colspan="2" id="tdvisa">Visa Card ***************</td>
+                        <tr>
+                            <th scope="row" style="color: grey;"> Billing</th>
                             <td style="font-family: Arial, Helvetica, sans-serif;">Your next billing date is June 2, 2021</td>
-                            </td>
-                        </tr> 
+                        </tr>
             
                         </tr>
                         <tr>
-                            <th scope="row" style="color:gray;">Plan Details</th>
-                            <td colspan="2"><b>Standard HD</b></td>
+                            <th scope="row" style="color:gray;" >Plan Details</th>
+                            <td colspan="2" id="tdplan"><b>Standard HD</b></td>
                         </tr>
                         </tbody>
                     </table>
-                <a href="#" class="btn btn-primary">Edit Account</a>
-                <br>
-                <br>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                          <table>
-                              <tr>
-                                  <td><img src="./Images/profile1.png" alt="Profile 1" style="width:10%"></td>
-                                  <td>
-                                      <b>RuBa</b> <br>
-                                      All Maturity Levels
-                                  </td>
-                              </tr>
-                          </table>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">..........</div>
-                      </div>
+                    <a href="#" class="btn btn-primary">Edit Account</a>
+                    <br>
+                    <br>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <table>
+                                  <tr>
+                                      <td><img src="./Images/profile1.png" alt="Profile 1" style="width:10%"></td>
+                                      <td>
+                                          <b>RuBa</b> <br>
+                                          All Maturity Levels
+                                      </td>
+                                  </tr>
+                              </table>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">..........</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <table>
+                                    <tr>
+                                        <td><img src="./Images/profile2.png" alt="Profile 2" style="width:10%"></td>
+                                        <td>
+                                            <b>JaNa</b> <br>
+                                            All Maturity Levels
+                                        </td>
+                                    </tr>
+                                </table>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">.........</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree2" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <table>
+                                    <tr>
+                                        <td><img src="./Images/profile3.png" alt="Profile 3" style="width:10%"></td>
+                                        <td>
+                                            <b>LaNa</b> <br>
+                                            Kids
+                                        </td>
+                                    </tr>
+                                </table>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree2" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"> .......</div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree2">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <table>
+                                    <tr>
+                                        <td><img src="./Images/profile4.png" alt="Profile 4" style="width:10%"></td>
+                                        <td>
+                                            <b>Gio</b> <br>
+                                            All Maturity Levels
+                                        </td>
+                                    </tr>
+                                </table>
+                              </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">........</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            <table>
-                                <tr>
-                                    <td><img src="./Images/profile2.png" alt="Profile 2" style="width:10%"></td>
-                                    <td>
-                                        <b>JaNa</b> <br>
-                                        All Maturity Levels
-                                    </td>
-                                </tr>
-                            </table>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">.........</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            <table>
-                                <tr>
-                                    <td><img src="./Images/profile3.png" alt="Profile 3" style="width:10%"></td>
-                                    <td>
-                                        <b>LaNa</b> <br>
-                                        Kids
-                                    </td>
-                                </tr>
-                            </table>
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body"> .......</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            <table>
-                                <tr>
-                                    <td><img src="./Images/profile4.png" alt="Profile 4" style="width:10%"></td>
-                                    <td>
-                                        <b>Gio</b> <br>
-                                        All Maturity Levels
-                                    </td>
-                                </tr>
-                            </table>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">........</div>
-                  </div>
                 </div>
             </div>
         </Center>
