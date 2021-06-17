@@ -6,7 +6,7 @@
     <script type="text/javascript">
         function load()
         {
-            var user = "rouba@gmail.com"; //to be fetched from previous page
+            var user = sessionStorage.getItem("user"); //to be fetched from previous page
             var mydata = JSON.parse(users);
             for (i=0; i< mydata.length;i++)
             {
@@ -17,11 +17,19 @@
                     document.getElementById("tdphone").innerHTML=mydata[i].phone;
                     document.getElementById("tdvisa").innerHTML=mydata[i].card;
                     document.getElementById("tdplan").innerHTML="<b>"+mydata[i].plan+"</b>";
+                    document.getElementById("prof1").innerHTML=mydata[i].p1;
+                    document.getElementById("prof2").innerHTML=mydata[i].p2;
+                    document.getElementById("prof3").innerHTML=mydata[i].p3;
+                    document.getElementById("prof4").innerHTML=mydata[i].p4;
                 }
             }
-
-
         }
+        function editAccount()
+        {
+
+            window.location.assign("./EditAccount.html");
+        }
+
     </script>
 
 
@@ -79,7 +87,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <a href="#" class="btn btn-primary">Edit Account</a>
+                    <a href="#" class="btn btn-primary" onclick="editAccount()">Edit Account</a>
                     <br>
                     <br>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -90,7 +98,7 @@
                                   <tr>
                                       <td><img src="./Images/profile1.png" alt="Profile 1" style="width:10%"></td>
                                       <td>
-                                          <b>RuBa</b> <br>
+                                          <b id="prof1">RuBa</b> <br>
                                           All Maturity Levels
                                       </td>
                                   </tr>
@@ -108,7 +116,7 @@
                                     <tr>
                                         <td><img src="./Images/profile2.png" alt="Profile 2" style="width:10%"></td>
                                         <td>
-                                            <b>JaNa</b> <br>
+                                            <b id="prof2">JaNa</b> <br>
                                             All Maturity Levels
                                         </td>
                                     </tr>
@@ -126,7 +134,7 @@
                                     <tr>
                                         <td><img src="./Images/profile3.png" alt="Profile 3" style="width:10%"></td>
                                         <td>
-                                            <b>LaNa</b> <br>
+                                            <b id="prof3">LaNa</b> <br>
                                             Kids
                                         </td>
                                     </tr>
@@ -144,7 +152,7 @@
                                     <tr>
                                         <td><img src="./Images/profile4.png" alt="Profile 4" style="width:10%"></td>
                                         <td>
-                                            <b>Gio</b> <br>
+                                            <b id="prof4">Gio</b> <br>
                                             All Maturity Levels
                                         </td>
                                     </tr>
