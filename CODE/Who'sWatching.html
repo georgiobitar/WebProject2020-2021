@@ -9,12 +9,12 @@
         for (i=0; i<mydata.length; i++){
 
            
-            if (mydata[i].email == user){
+            if (mydata[i].email === user){
                 window.alert("165454");
-                document.getElementById("prof1").value=mydata[i].p1;
-                document.getElementById("prof2").value=mydata[i].p2;
-                document.getElementById("prof3").value=mydata[i].p3;
-                document.getElementById("prof4").value=mydata[i].p4;
+                document.getElementById("prof1").innerHTML=mydata[i].p1;
+                document.getElementById("prof2").innerHTML=mydata[i].p2;
+                document.getElementById("prof3").innerHTML=mydata[i].p3;
+                document.getElementById("prof4").innerHTML=mydata[i].p4;
             }
         }
     }
