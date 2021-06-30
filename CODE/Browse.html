@@ -22,6 +22,9 @@
     function Signout(){
         window.location.assign("./Signin.html");
     }
+    function Play(){
+        window.location.assign("./PlayVideo.html");
+    }
 
     </script>
     <style type="text/css">
@@ -71,6 +74,7 @@
         {
             display: none;
         }
+
     </style>
 
 </head>
@@ -89,28 +93,13 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">TV Shows</a>
+                            <a class="nav-link" href="#" onclick="Account()">Account</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Movies</a>
+                            <a class="nav-link" href="#" onclick="Aboutus()">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">New & Popular</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My List</a>
-                        </li>
-                        <li class="nav-item dropdown" style="float: right">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Profile
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#" onclick="Account()">Account</a></li>
-                                <li><a class="dropdown-item" href="#">Help Center</a></li>
-                                <li><a class="dropdown-item" href="#" onclick="Aboutus()">About Us</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#"onclick="Signout()">Sign Out</a></li>
-                            </ul>
+                            <a class="nav-link" href="#" onclick="Signout()">Sign Out</a>
                         </li>
                     </ul>
                 </div>
@@ -129,8 +118,8 @@
             <div class="carousel-item active" data-bs-interval="10000">
                 <img src="Images/StrangerThingsimg.jpg" class="d-block w-100" alt="..."  height="600">
                 <div class="carousel-caption d-none d-md-block">
-                    <p style="color: Red; font-family: Kalam;" class="fs-1">Stranger Things</p>
-                    <button type="button" class="btn btn-light">Play</button>
+                    <p style="color: Red; font-family: 'Segoe Script';" class="fs-1">Stranger Things</p>
+                    <button type="button" class="btn btn-light" onclick="Play()">Play</button>
                     <p style="color: white">Coming Soon...</p>
                 </div>
             </div>
@@ -167,7 +156,7 @@
                         <img src="Images/friendcards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">Link</button>
 
@@ -178,7 +167,7 @@
                         <img src="Images/lovedeathrobotscards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
 
@@ -209,7 +198,7 @@
                         <img src="Images/lupincards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -219,7 +208,7 @@
                         <img src="Images/sweettoothcards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -229,7 +218,7 @@
                         <img src="Images/familyguycards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -239,7 +228,7 @@
                         <img src="Images/finalspacecards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -251,12 +240,43 @@
                         <img src="Images/thewitchercards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary"  onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
                         </center>
                     </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/BreakingBadCard.PNG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary"  onclick="Play()">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/HouseOfCardsCard.PNG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/MoneyHeistCard.PNG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary"  onclick="Play()">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+
                 </div>
             </div>
 
@@ -280,7 +300,7 @@
                         <img src="Images/the100cards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary"  onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -290,7 +310,7 @@
                         <img src="Images/queensgambitcards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary"  onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -300,7 +320,7 @@
                         <img src="Images/strangerthingscards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -310,7 +330,7 @@
                         <img src="Images/darkcards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
@@ -322,7 +342,37 @@
                         <img src="Images/thewitchercards.JPG" class="card-img-top" alt="...">
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-secondary">Play</button>
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/PeakyBlindersCard.PNG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/ShanshawkCard.PNG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
+                                <button type="button" class="btn btn-outline-secondary">Like</button>
+                                <a href="#" class="btn btn-outline-secondary">Link</a>
+                            </div>
+                        </center>
+                    </div>
+                    <div class="card bg-dark" id="card">
+                        <img src="Images/SherlockCard.PNG" class="card-img-top" alt="...">
+                        <center>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-secondary" onclick="Play()">Play</button>
                                 <button type="button" class="btn btn-outline-secondary">Like</button>
                                 <a href="#" class="btn btn-outline-secondary">Link</a>
                             </div>
